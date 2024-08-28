@@ -8,6 +8,8 @@ print(my_dict)
 print(my_dict.pop('Denis'))
 print(my_dict)
 
+print()
+
 #множество
 my_set = {1,2,3,1,2,3, 'Rodion', 55.0167}
 print(my_set)
