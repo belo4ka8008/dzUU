@@ -13,6 +13,7 @@ def string_info(string):
     return len(string),string.upper(),string.lower()
 
 def is_contains(string, list_to_search):
+    count_calls()
     for i in range(len(list_to_search)): #чтобы проверить совпадение: перебрать каждый элемент
                                         # + привести к одному регистру. Как упростить?
         if str(list_to_search[i]).lower() == string.lower():#очень долго подбирал
