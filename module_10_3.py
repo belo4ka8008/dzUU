@@ -1,5 +1,9 @@
 #"Банковские операции"
 
+#смысл: замок изначально открыт, снимаем деньги до тех пор пока они неч кончатся
+#начинаем закидывать деньги пока они не станут больше 500 (чтобы точно можно было что то снять)
+#снимаем замок тк есть что снимать
+
 import threading
 from time import sleep
 from random import randint
@@ -17,8 +21,8 @@ class Bank:
             n += 1
             print(f'Пополнение: {money_in}. Баланс: {self.balance}')
             sleep(0.001)
-        if self.balance >= 500 and self.lock.locked():
-            self.lock.release()
+            if self.balance >= 500 and self.lock.locked():
+                self.lock.release()
 
 
     def take(self):
